@@ -1,0 +1,22 @@
+<h1>View <%= pluralize(@announcement.count, "Announcement") %></h1>
+<table class="table table-striped">
+	<thead>
+		<th scope="col">Title</th>
+		<th scope="col">Body</th>
+		<th scope="col">Actions</th>
+	</thead>
+	<tbody>
+		<% @announcement.each do |announcement| %>
+		<tr>
+			<td><%= announcement.title %></td>
+			<td><%= announcement.body %></td>
+			<td>
+				<a href="/announcement/<%= announcement.id %>">Show</a> |
+				<a href="/announcement/<%= announcement.id %>/edit">Edit</a> |
+				<a href="/announcement/<%= announcement.id %>/delete">Delete</a>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<a href="/announcement/new">Create Title</a>
