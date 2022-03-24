@@ -1,0 +1,13 @@
+<<h1>Delete <%= @announcement.title %> <%= @announcement.body %></h1>
+<form action="/announcement/ <%= @announcement.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<div>
+		<label>Title:</label>
+		<input type="text" name="announcement[title]" value="<%= @announcement.title%>" disabled>
+	</div>
+	<div>
+		<label>Body:</label>
+		<input type="text" name="announcement[title]" value="<%= @announcement.body%>" disabled>
+	</div>
+	<input type="submit" value= "Delete">
+</form>

@@ -1,0 +1,17 @@
+<<h1>Edit <%= @announcement.title %> <%= @announcement.body %></h1>
+<form action="/announcement/ <%= @announcement.id %>" method="post">
+	<div>
+		<label>Title:</label>
+		<input type="text" name="announcement[title]" value="<%= @announcement.title%>">
+	</div>
+	<div>
+		<label>Body:</label>
+		<input type="text" name="announcement[body]" value="<%= @announcement.body%>">
+	</div>
+	<input type="submit" value= "Update">
+</form>
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e| %>
+	<div><%= e %></div>
+	<% end %>
+<% end %>

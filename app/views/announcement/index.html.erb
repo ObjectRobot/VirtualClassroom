@@ -1,9 +1,9 @@
-<h1>View <%= pluralize(@announcement.count, "Announcement") %></h1>
-<table class="table table-striped">
+<h1>View Announcement</h1>
+<table>
 	<thead>
-		<th scope="col">Title</th>
-		<th scope="col">Body</th>
-		<th scope="col">Actions</th>
+		<th>Title</th>
+		<th>Body</th>
+		<th>Actions</th>
 	</thead>
 	<tbody>
 		<% @announcement.each do |announcement| %>
@@ -19,4 +19,4 @@
 		<% end %>
 	</tbody>
 </table>
-<a href="/announcement/new">Create Title</a>
+<a href="/announcement/new">Create Announcement</a>
