@@ -9,6 +9,7 @@ class AnnouncementController < ApplicationController
 		# instance variable is available to announcement index.html.erb.
 		@announcement = Announcement2.all
 	end
+
 	# new method gets called when the announcement/new URL is requested.
 	# new method is mapped to the announcement new.html.erb
 	def new
@@ -38,6 +39,20 @@ class AnnouncementController < ApplicationController
 			redirect_to "/announcement/new" 
 		end
 	end
+
+	# show method gets called when the announcement/:id URL is requested
+	# show method is mapped to the announcement show.html.erb
+	def show
+		# call find method on Announcement model class giving it the id sent
+		# in the request
+		# find method selects all of the data in the announcement table where
+		# the id is equal to the id sent in the request 
+		# selected data will be returned in an array of movie objects 
+		# store the array of movie objects in an instance variable
+		# instance variable is availble to actors show.html.erb
+		@announcement = Announcement2.find(params[:id])
+	end
+
 	# edit method gets called when the announcement/:id/edit URL is requested
 	# edit method is mapped to the announcement edit.html.erb
 	def edit
@@ -50,18 +65,7 @@ class AnnouncementController < ApplicationController
 		# available to the edit.html.erb
 		@announcement = Announcement2.find(params[:id])
 	end
-	# show method gets called when the announcement/:id URL is requested
-	# show method is mapped to the announcement show.html.erb
-	def show
-		# call find method on Announcement model class giving it the id sent
-		# in the request
-		# find method selects all of the data in the announcement table where
-		# the id is equal to the id sent in the request 
-		# selected data will be returned in an array of movie objects 
-		# store the array of movie objects in an instance variable
-		# instance variable is availble to actors show.html.erb
-		@anouncement= Announcement2.find(params[:id]).announcement
-	end
+	
 
 	# update method gets called when the Update button is pushed on the
 	# announcement edit.html.erb

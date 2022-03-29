@@ -1,4 +1,4 @@
-<<h1>Edit <%= @announcement.title %> <%= @announcement.body %></h1>
+<h1>Edit <%= @announcement.title %> <%= @announcement.body %></h1>
 <form action="/announcement/ <%= @announcement.id %>" method="post">
 	<div>
 		<label>Title:</label>
@@ -6,7 +6,7 @@
 	</div>
 	<div>
 		<label>Body:</label>
-		<input type="text" name="announcement[body]" value="<%= @announcement.body%>">
+ 		<textarea cols= "50" rows= "20" input type="text" name="announcement[body]" value="<%= @announcement.body%>"></textarea>
 	</div>
 	<input type="submit" value= "Update">
 </form>

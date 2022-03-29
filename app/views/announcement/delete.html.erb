@@ -1,4 +1,4 @@
-<<h1>Delete <%= @announcement.title %> <%= @announcement.body %></h1>
+<h1>Delete <%= @announcement.title %> <%= @announcement.body %></h1>
 <form action="/announcement/ <%= @announcement.id %>" method="post">
 	<input type="hidden" name="_method" value="delete">
 	<div>

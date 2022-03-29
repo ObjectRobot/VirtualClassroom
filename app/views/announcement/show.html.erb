@@ -1,1 +1,12 @@
-s
+<h1>View <%= @announcement.title %> <%= @announcement.body %></h1>
+<form action="/announcement/ <%= @announcement.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<div>
+		<label>Title:</label>
+		<input type="text" name="announcement[title]" value="<%= @announcement.title%>" disabled>
+	</div>
+	<div>
+		<label>Body:</label>
+		<textarea cols= "50" rows= "20" input name="announcement[body]" disabled ><%= @announcement.body%></textarea>
+	</div>
+</form>

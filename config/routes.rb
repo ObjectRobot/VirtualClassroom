@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   post "announcement/:id" => "announcement#update"
   get "announcement/:id/delete" => "announcement#delete"
   delete "announcement/:id" => "announcement#destroy"
+  get "announcement/:id" => "announcement#show"
 end

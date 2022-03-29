@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_22_143005) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_29_141523) do
   create_table "announcement2s", force: :cascade do |t|
     t.string "title"
     t.string "body"
@@ -23,4 +23,12 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_22_143005) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "appearances", force: :cascade do |t|
+    t.integer "announcement_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["announcement_id"], name: "index_appearances_on_announcement_id"
+  end
+
+  add_foreign_key "appearances", "announcements"
 end
