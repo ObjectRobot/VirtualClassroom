@@ -1,0 +1,18 @@
+<h1>Create Appearance</h1>
+<form action="/appearances" method="post">
+	<div>
+		<label>Announcement:</label>
+		<select name="announcement[announcement_id]">
+			<option></option>
+			<% @annoncement.each do |announcement| %>
+			<option value="<%= announcement.id %>"><%= announcement.title %> <%= announcement.body %></option>	
+			<% end %>
+		</select>
+	</div>
+	<input type="submit" value="Create">
+</form>
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e| %>
+	<div><%= e %></div>
+	<% end %>
+<% end %>

@@ -17,4 +17,7 @@ Rails.application.routes.draw do
   get "announcement/:id/delete" => "announcement#delete"
   delete "announcement/:id" => "announcement#destroy"
   get "announcement/:id" => "announcement#show"
+  get "appearances" => "appearances#index"
+  post "appearances" => "appearances#create"
+  get "weblink" => "weblink#index"
 end

@@ -1,8 +1,8 @@
 <h1>View Announcement</h1>
-<table>
+<table class="table table-striped">
 	<thead>
-		<th>Title</th>
-		<th>Actions</th>
+		<th scope="col">Title</th>
+		<th scope="col">Actions</th>
 	</thead>
 	<tbody>
 		<% @announcement.each do |announcement| %>
@@ -17,4 +17,3 @@
 		<% end %>
 	</tbody>
 </table>
-<a href="/announcement/new">Create Announcement</a>

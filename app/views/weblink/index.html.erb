@@ -1,0 +1,19 @@
+<h1>View Weblink</h1>
+<table class="table table-striped">
+	<thead>
+		<th scope="col">Title</th>
+		<th scope="col">URL</th>
+	</thead>
+	<tbody>
+		<% @weblink.each do |weblink| %>
+		<tr>
+			<td><%= weblink.title %></td>
+			<td>
+				<a href="/weblink/<%= weblink.id %>">Show</a> |
+				<a href="/weblink/<%= weblink.id %>/edit">Edit</a> |
+				<a href="/weblink/<%= weblink.id %>/delete">Delete</a>
+			</td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
