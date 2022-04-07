@@ -1,0 +1,17 @@
+<h1> Create Weblink </h1>
+<form action="/weblink" method="post">
+	<div class="form-group">
+		<label>Title:</label>
+		<input type="text" name="weblink[title]" class="form-control">
+	</div>
+	<div class="form-group">
+		<label>Url:</label>
+		<textarea input type="text" name="weblink[url]" class="form-control"></textarea>
+	</div>
+	<input type="submit" value= "Create" class="btn btn-primary">
+</form>
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e| %>
+	<div class="alert alert-danger"><%= e %></div>
+	<% end %>
+<% end %>

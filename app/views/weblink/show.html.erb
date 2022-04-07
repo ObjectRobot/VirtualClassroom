@@ -1,0 +1,11 @@
+<h1>View <%= @weblink.title %></h1>
+<form action="/weblink/ <%= @weblink.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<div>
+		<label>Title:</label>
+		<input type="text" name="weblink[title]" value="<%= @weblink.title%>" disabled>
+	<div>
+		<label>Url:</label>
+		<div><a href = "<%= @weblink.url%>"></a></div>
+	</div>
+</form>

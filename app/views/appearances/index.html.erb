@@ -9,6 +9,15 @@
 			<% end %>
 		</select>
 	</div>
+	<div>
+		<label>Weblink:</label>
+		<select name="weblink[weblink_id]">
+			<option></option>
+			<% @weblink.each do |weblink| %>
+			<option value="<%= weblink.id %>"><%= weblink.title %> <%= weblink.body %></option>	
+			<% end %>
+		</select>
+	</div>
 	<input type="submit" value="Create">
 </form>
 <% if flash[:errors] %>

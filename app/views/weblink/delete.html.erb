@@ -1,0 +1,13 @@
+<h1>Delete <%= @weblink.title %></h1>
+<form action="/weblink/ <%= @weblink.id %>" method="post">
+	<input type="hidden" name="_method" value="delete">
+	<div>
+		<label>Title:</label>
+		<input type="text" name="weblink[title]" value="<%= @weblink.title%>" disabled class="form-control">
+	</div>
+	<div>
+		<label>Body:</label>
+		<textarea input type="text" name="weblink[url]" value="<%= @weblink.url%>" disabled class="form-control"></textarea>
+	</div>
+	<input type="submit" value= "Delete" class="btn btn-primary">
+</form>

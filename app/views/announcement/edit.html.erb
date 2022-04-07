@@ -1,14 +1,14 @@
-<h1>Edit <%= @announcement.title %> <%= @announcement.body %></h1>
+<h1>Edit <%= @announcement.title %></h1>
 <form action="/announcement/ <%= @announcement.id %>" method="post">
 	<div>
 		<label>Title:</label>
-		<input type="text" name="announcement[title]" value="<%= @announcement.title%>">
+		<input type="text" name="announcement[title]" value="<%= @announcement.title%>" class="form-control">
 	</div>
 	<div>
 		<label>Body:</label>
- 		<textarea cols= "50" rows= "20" input type="text" name="announcement[body]" value="<%= @announcement.body%>"></textarea>
+ 	 <textarea cols= "50" rows= "20" input name="announcement[body]" class="form-control"><%= @announcement.body%></textarea>
 	</div>
-	<input type="submit" value= "Update">
+	<input type="submit" value= "Update" class="btn btn-primary">
 </form>
 <% if flash[:errors] %>
 	<% flash[:errors].each do |e| %>

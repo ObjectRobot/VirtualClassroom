@@ -20,4 +20,11 @@ Rails.application.routes.draw do
   get "appearances" => "appearances#index"
   post "appearances" => "appearances#create"
   get "weblink" => "weblink#index"
+  get "weblink/new" => "weblink#new"
+  post "weblink" => "weblink#create"
+  get "weblink/:id/edit" => "weblink#edit"
+  post "weblink/:id" => "weblink#update"
+  get "weblink/:id/delete" => "weblink#delete"
+  delete "weblink/:id/delete" => "weblink#destroy"
+  get "weblink/:id" => "weblink#show"  
 end

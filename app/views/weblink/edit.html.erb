@@ -1,0 +1,17 @@
+<h1>Edit <%= @weblink.title %></h1>
+<form action="/weblink/ <%= @weblink.id %>" method="post">
+	<div>
+		<label>Title:</label>
+		<input type="text" name="weblink[title]" value="<%= @weblink.title%>" class="form-control">
+	</div>
+	<div>
+		<label>Url:</label>
+ 		<textarea input type="text" name="weblink[url]" value="<%= @weblink.url%>" class="form-control"></textarea>
+	</div>
+	<input type="submit" value= "Update" class="btn btn-primary">
+</form>
+<% if flash[:errors] %>
+	<% flash[:errors].each do |e| %>
+	<div><%= e %></div>
+	<% end %>
+<% end %>
