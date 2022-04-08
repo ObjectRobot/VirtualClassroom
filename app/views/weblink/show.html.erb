@@ -6,6 +6,6 @@
 		<input type="text" name="weblink[title]" value="<%= @weblink.title%>" disabled>
 	<div>
 		<label>Url:</label>
-		<div><a href = "<%= @weblink.url%>"></a></div>
+		<span><a href = "<%= @weblink.url%>" target="_blank"><%= @weblink.url%></a><span>
 	</div>
 </form>
