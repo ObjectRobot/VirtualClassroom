@@ -3,10 +3,6 @@
 <form action="/announcement/ <%= @announcement.id %>" method="post">
 	<input type="hidden" name="_method" value="delete">
 	<div>
-		<th scope="col"><label>Title:</label></th>
-		<td><input type="text" name="announcement[title]" value="<%= @announcement.title%>" disabled></td>
-	</div>
-	<div>
 		<th scope="col"><label>Body:</label></th>
 		<td><textarea cols= "50" rows= "20" input name="announcement[body]" disabled ><%= @announcement.body%></textarea></td>
 	</div>
