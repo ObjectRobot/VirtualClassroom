@@ -1,0 +1,2 @@
+module WebfileHelper
+end
