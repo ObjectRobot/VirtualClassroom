@@ -18,6 +18,15 @@
 			<% end %>
 		</select>
 	</div>
+	<div>
+		<label>Webfile:</label>
+		<select name="webfile[webfile_id]">
+			<option></option>
+			<% @webfile.each do |webfile| %>
+			<option value="<%= webfile.id %>"><%= webfile.title %> <%= webfile.download %></option>	
+			<% end %>
+		</select>
+	</div>
 	<input type="submit" value="Create">
 </form>
 <% if flash[:errors] %>
