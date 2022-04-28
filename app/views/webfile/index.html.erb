@@ -2,15 +2,13 @@
 <table class="table table-striped">
 	<thead>
 		<th scope="col">Title</th>
-		<th scope="col">Download</th>
 	</thead>
 	<tbody>
 		<% @webfile.each do |webfile| %>
 		<tr>
 			<td><%= webfile.title %></td>
 			<td>
-				<a href="/webfile/<%= webfile.id %>">Show</a> |
-				<a href="/webfile/<%= webfile.id %>/edit">Edit</a>
+			<%= image_tag(webfile.image) %>
 			</td>
 		</tr>
 		<% end %>

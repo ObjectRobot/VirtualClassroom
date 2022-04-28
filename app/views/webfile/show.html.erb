@@ -6,9 +6,5 @@
 	<input type="hidden" name="_method" value="delete">
 	<div>
 		<label>Title:</label>
-		<input type="text" name="webfile[title]" value="<%= @webfile.title%>" disabled>
-	<div>
-		<label>Download:</label>
-		<span><a href = "<%= @webfile.download%>" target="_blank"><%= @webfile.download%></a><span>
-	</div>
+		<p><%= @webfile.title%></p>
 </form>
