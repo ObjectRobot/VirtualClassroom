@@ -75,3 +75,5 @@ gem 'hirb', '~> 0.7.3'
 gem 'sassc', '~> 2.4'
 gem 'bootstrap', '~> 5.1', '>= 5.1.3'
 gem 'jquery-rails'
+gem 'ruby-vips', '~> 2.1', '>= 2.1.4'
+gem "mini_magick"

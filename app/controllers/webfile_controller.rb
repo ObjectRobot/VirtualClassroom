@@ -96,6 +96,11 @@ class WebfileController < ApplicationController
 	end
 	
 	private
+	# Use callbacks to share common setup or constraints
+	def set_webfile
+		@webfile = Webfile.find(params:[:id])
+	end
+	
 	def webfile_params
 		# params is a Rails object that gets the specified request
 		# paramters

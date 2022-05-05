@@ -7,9 +7,7 @@
 		<% @webfile.each do |webfile| %>
 		<tr>
 			<td><%= webfile.title %></td>
-			<td>
-			<%= image_tag(webfile.image) %>
-			</td>
+			<td><%= image_tag(webfile.image) %></td>
 		</tr>
 		<% end %>
 	</tbody>
